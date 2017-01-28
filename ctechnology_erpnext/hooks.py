@@ -119,4 +119,8 @@ app_license = "MIT"
 # 	"frappe.desk.doctype.event.event.get_events": "ctechnology_erpnext.event.get_events"
 # }
 
-fixtures = ["Custom Field", "Custom Script", "Print Format", "Property Setter"]
+fixtures = [
+	{"dt" : "Custom Field", "filters" : [["name", "in", ['Mode of Payment-consoleerp_territory', 'Sales Invoice Item-consoleerp_cost']]]}, 
+	"Custom Script", 
+	{"dt" : "Print Format", "filters" : [["name", "in", ['Control Technology Sales Invoice']]]}, 
+	{"dt" : "Property Setter", "filters" : [["name", "in", [' Sales Invoice-default_print_format']]]}]
