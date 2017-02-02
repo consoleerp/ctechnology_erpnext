@@ -121,6 +121,10 @@ app_license = "MIT"
 
 fixtures = [
 	{"dt" : "Custom Field", "filters" : [["name", "in", ['Mode of Payment-consoleerp_territory', 'Sales Invoice Item-consoleerp_cost', 'Sales Invoice-consoleerp_hasqty']]]}, 
+	
 	"Custom Script", 
+	
 	{"dt" : "Print Format", "filters" : [["name", "in", ['Control Technology Sales Invoice']]]}, 
-	{"dt" : "Property Setter", "filters" : [["name", "in", [' Sales Invoice-default_print_format']]]}]
+	
+	
+	{"dt" : "Property Setter", "filters" : [["name", "in", ['Sales Invoice-default_print_format', 'Sales Invoice-update_stock-hidden', 'Sales Invoice-update_stock-read_only', 'Sales Invoice-update_stock-default', 'Sales Invoice-time_sheet_list-hidden', 'Sales Invoice-terms_section_break-hidden', 'Sales Invoice-recurring_invoice-hidden', 'Sales Invoice-more_information-hidden', 'Sales Invoice-edit_printing_settings-hidden', 'Sales Invoice-column_break4-hidden', 'Sales Invoice-section_break_88-hidden', 'Sales Invoice-currency_and_price_list-hidden', 'Sales Invoice-address_and_contact-hidden', 'Sales Invoice-taxes_section-hidden', 'Sales Invoice-project-hidden', 'Sales Invoice-section_break_40-label']]]}]
