@@ -119,12 +119,58 @@ app_license = "MIT"
 # 	"frappe.desk.doctype.event.event.get_events": "ctechnology_erpnext.event.get_events"
 # }
 
-fixtures = [
-	{"dt" : "Custom Field", "filters" : [["name", "in", ['Mode of Payment-consoleerp_territory', 'Sales Invoice Item-consoleerp_cost', 'Sales Invoice-consoleerp_hasqty']]]}, 
-	
-	"Custom Script", 
-	
-	{"dt" : "Print Format", "filters" : [["name", "in", ['Control Technology Sales Invoice']]]}, 
-	
-	
-	{"dt" : "Property Setter", "filters" : [["name", "in", ['Sales Invoice-default_print_format', 'Sales Invoice-update_stock-hidden', 'Sales Invoice-update_stock-read_only', 'Sales Invoice-update_stock-default', 'Sales Invoice-time_sheet_list-hidden', 'Sales Invoice-terms_section_break-hidden', 'Sales Invoice-recurring_invoice-hidden', 'Sales Invoice-more_information-hidden', 'Sales Invoice-edit_printing_settings-hidden', 'Sales Invoice-column_break4-hidden', 'Sales Invoice-section_break_88-hidden', 'Sales Invoice-currency_and_price_list-hidden', 'Sales Invoice-address_and_contact-hidden', 'Sales Invoice-taxes_section-hidden', 'Sales Invoice-project-hidden', 'Sales Invoice-section_break_40-label']]]}]
+fixtures = [{
+        "dt": "Custom Field",
+        "filters": [
+            ["name", "in", [
+				'Mode of Payment-consoleerp_territory',
+                'Sales Invoice Item-consoleerp_cost',
+                'Sales Invoice-consoleerp_hasqty',
+                'Sales Invoice-consoleerp_actual_qty',
+                'Sales Invoice-consoleerp_warehouse'
+            ]]
+        ]
+    },
+    "Custom Script", {
+        "dt": "Print Format",
+        "filters": [
+            ["name", "in", ['Control Technology Sales Invoice']]
+        ]
+    }, {
+        "dt": "Property Setter",
+        "filters": [
+            ["name", "in", [
+                'Sales Invoice-default_print_format',
+                'Sales Invoice-update_stock-hidden',
+                'Sales Invoice-update_stock-read_only',
+                'Sales Invoice-update_stock-default',
+                'Sales Invoice-time_sheet_list-hidden',
+                'Sales Invoice-terms_section_break-hidden',
+                'Sales Invoice-recurring_invoice-hidden',
+                'Sales Invoice-more_information-hidden',
+                'Sales Invoice-edit_printing_settings-hidden',
+                'Sales Invoice-column_break4-hidden',
+                'Sales Invoice-section_break_88-hidden',
+                'Sales Invoice-currency_and_price_list-hidden',
+                'Sales Invoice-address_and_contact-hidden',
+                'Sales Invoice-taxes_section-hidden',
+                'Sales Invoice-project-hidden',
+                'Sales Invoice-section_break_40-label',
+				
+                'Sales Invoice Item-rate-columns',
+                'Sales Invoice Item-discount_percentage-columns',
+                'Sales Invoice Item-qty-columns',
+                'Sales Invoice Item-item_code-columns',
+                'Sales Invoice Item-warehouse-in_list_view',
+                'Sales Invoice Item-warehouse-hidden',
+                'Sales Invoice Item-rate-label',
+                'Sales Invoice Item-serial_no-in_list_view',
+                'Sales Invoice Item-batch_no-in_list_view',
+                'Sales Invoice Item-amount-label',
+                'Sales Invoice Item-qty-label',
+                'Sales Invoice Item-discount_percentage-label',
+                'Sales Invoice Item-discount_percentage-in_list_view'
+            ]]
+        ]
+    }
+]
