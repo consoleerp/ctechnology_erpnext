@@ -126,7 +126,7 @@ fixtures = [{
 				'Mode of Payment-consoleerp_territory',
                 'Sales Invoice Item-consoleerp_cost',
                 'Sales Invoice-consoleerp_hasqty',
-                'Sales Invoice-consoleerp_actual_qty',
+                'Sales Invoice Item-consoleerp_actual_qty',
                 'Sales Invoice-consoleerp_warehouse'
             ]]
         ]
