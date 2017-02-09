@@ -144,6 +144,9 @@ fixtures = [{
         "dt": "Property Setter",
         "filters": [
             ["name", "in", [
+				'Customer-territory-ignore_user_permissions',
+				'Sales Invoice-territory-ignore_user_permissions',
+				
                 'Sales Invoice-default_print_format',
                 'Sales Invoice-update_stock-hidden',
                 'Sales Invoice-update_stock-read_only',
