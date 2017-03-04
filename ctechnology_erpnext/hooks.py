@@ -134,12 +134,6 @@ fixtures = [{
                 'Sales Invoice-consoleerp_warehouse'
             ]]
         ]
-    },
-    "Custom Script", {
-        "dt": "Print Format",
-        "filters": [
-            ["name", "in", ['Control Technology Sales Invoice']]
-        ]
     }, {
         "dt": "Property Setter",
         "filters": [
