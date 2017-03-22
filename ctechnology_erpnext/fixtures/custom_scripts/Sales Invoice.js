@@ -168,3 +168,6 @@ var cust_fetch_item_cost_with_warehouse = async function(frm, cdt, cdn) {
 			});
 		});
 }
+
+// Advanced Item Search
+frappe.require("/assets/js/consoleerp_erpnext_client.min.js", function(){});
