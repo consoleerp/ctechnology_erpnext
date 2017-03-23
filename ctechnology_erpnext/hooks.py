@@ -30,8 +30,29 @@ app_license = "MIT"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 doctype_js = {
+	"Item" : "customizations/item/item.js",
+	
+	# Selling
 	"Quotation" : "customizations/quotation/quotation.js",
-	"Sales Invoice" : "customizations/sales_invoice/sales_invoice.js"
+	"Sales Order" : "customizations/sales_order/sales_order.js",
+	"Sales Invoice" : "customizations/sales_invoice/sales_invoice.js",
+	"Delivery Note" : "customizations/delivery_note/delivery_note.js",
+	
+	# Payments
+	"Payment Request" : "customizations/payment_request/payment_request.js",
+	"Payment Entry" : "customizations/payment_entry/payment_entry.js",
+	
+	#Stock
+	"Stock Entry" : "customizations/stock_entry/stock_entry.js",
+	
+	# Buying
+	"Material Request" : "customizations/material_request/material_request.js",
+	"Request for Quotation" : "customizations/request_for_quotation/request_for_quotation.js",
+	"Supplier Quotation" : "customizations/supplier_quotation/supplier_quotation.js",
+	"Purchase Order" : "customizations/purchase_order/purchase_order.js",
+	"Purchase Receipt" : "customizations/purchase_receipt/purchase_receipt.js",
+	"Purchase Invoice" : "customizations/purchase_invoice/purchase_invoice.js",
+	
 }
 
 # Home Pages
@@ -132,14 +153,11 @@ fixtures = [{
 				'Customer-consoleerp_is_pos', # Sales Invoice add_fetch to Is POS
 			
 				'Mode of Payment-consoleerp_territory',				
-				'Warehouse-consoleerp_territory',
 				
-				# Sales Invoice Fields
-                'Sales Invoice Item-consoleerp_cost', # Cost
+				# Sales Invoice Fields                
                 'Sales Invoice-consoleerp_hasqty', # Has Qty check field
+				'Sales Invoice Item-consoleerp_cost', # Cost
                 'Sales Invoice Item-consoleerp_actual_qty', # actual qty
-				'Sales Invoice-consoleerp_territory', # territory
-                'Sales Invoice-consoleerp_warehouse', # warehouse
 				
 				# Quotation
 				'Quotation-consoleerp_notes', # a small-text datafield in the header of quotation

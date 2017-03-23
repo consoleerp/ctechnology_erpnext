@@ -8,12 +8,35 @@ MIT
 
 # Customizations made for Control Technology
 
+
+## Item
+   Cost is shown in Item Dashboard. Best example of showing custom data anywhere you want.  
+   Uses `format_currency` to get proper symbols.
+
 ## Customer
 - **consoleerp_is_pos**  
    A check field to specify the customer is paid always or not.  
    used in Sales Invoice using
    `frm.add_fetch('customer', 'consoleerp_is_pos', 'is_pos');`
 
+## Sales Invoice
+- **add_fetches**  
+   - `is_pos`  
+      This is fetched from the customer (`customer`)
+	  
+- **`consoleerp_has_qty`**  
+   `item_code` in `Sales Invoice Item`  
+   HAS_QTY - if checked, it will list only those items with qty
+
+- **Mode of Payment / Territory**  
+   The mode of payment table is cleared and set if the territory is changed
+   Cash Riyadh, Cash Dammam.. etc.
+   
+**Sales Invoice Item**  
+- **consoleerp_cost**, **consoleerp_actual_qty**    
+   Fetched from `consoleerp_erpnext_client.api.item.item_warehouse_info`
+   
+   
 ## Quotation
 
 **Quotation Item**

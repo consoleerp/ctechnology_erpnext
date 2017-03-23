@@ -4,6 +4,10 @@ from frappe.desk.reportview import get_match_cond
 from frappe.utils import nowdate
 
 def hasqty_item_query(doctype, txt, searchfield, start, page_len, filters, as_dict=False):
+	"""
+	Query for has_qty field
+	"""
+
 	conditions = []
 	warehouse = filters["warehouse"]
 	# deleting to prevent get_filters_cond & get_match_cond
@@ -18,7 +22,7 @@ def hasqty_item_query(doctype, txt, searchfield, start, page_len, filters, as_di
 			JOIN tabBin 
 			ON tabBin.item_code = tabItem.name
 		where
-			tabBin.actual_qty > 0
+			(tabBin.actual_qty - tabBin.reserved_qty - tabBin.reserved_qty_for_production) > 0
 			and tabBin.warehouse = %(warehouse)s
 			and tabItem.docstatus < 2
 			and tabItem.has_variants=0

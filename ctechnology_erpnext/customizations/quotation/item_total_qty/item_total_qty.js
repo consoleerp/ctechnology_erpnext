@@ -2,7 +2,7 @@ item_code : function(frm, cdt, cdn) {
 	// child doc ref
 	var child_doc = locals[cdt][cdn];
 	frappe.call({
-		method : "consoleerp_erpnext_client.api.stock_item.item_warehouse_info",
+		method : "consoleerp_erpnext_client.api.item.item_warehouse_info",
 		args : {
 			item : child_doc.item_code
 		},
