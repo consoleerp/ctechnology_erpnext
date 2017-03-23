@@ -29,6 +29,7 @@ app_license = "MIT"
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
+doctype_js = {"Quotation" : "customizations/Quotation/Quotation.js"}
 
 # Home Pages
 # ----------
@@ -127,50 +128,15 @@ fixtures = [{
 				
 				'Warehouse-consoleerp_territory',
 				
-                'Sales Invoice Item-consoleerp_cost',
-                'Sales Invoice-consoleerp_hasqty',
-                'Sales Invoice Item-consoleerp_actual_qty',
-				'Sales Invoice-consoleerp_territory',
-                'Sales Invoice-consoleerp_warehouse'
-            ]]
-        ]
-    }, {
-        "dt": "Property Setter",
-        "filters": [
-            ["name", "in", [
-				'Customer-territory-ignore_user_permissions',
-				'Sales Invoice-territory-ignore_user_permissions',
+				# Sales Invoice Fields
+                'Sales Invoice Item-consoleerp_cost', # Cost
+                'Sales Invoice-consoleerp_hasqty', # Has Qty check field
+                'Sales Invoice Item-consoleerp_actual_qty', # actual qty
+				'Sales Invoice-consoleerp_territory', # territory
+                'Sales Invoice-consoleerp_warehouse', # warehouse
 				
-                'Sales Invoice-default_print_format',
-                'Sales Invoice-update_stock-hidden',
-                'Sales Invoice-update_stock-read_only',
-                'Sales Invoice-update_stock-default',
-                'Sales Invoice-time_sheet_list-hidden',
-                'Sales Invoice-terms_section_break-hidden',
-                'Sales Invoice-recurring_invoice-hidden',
-                'Sales Invoice-more_information-hidden',
-                'Sales Invoice-edit_printing_settings-hidden',
-                'Sales Invoice-column_break4-hidden',
-                'Sales Invoice-section_break_88-hidden',
-                'Sales Invoice-currency_and_price_list-hidden',
-                'Sales Invoice-address_and_contact-hidden',
-                'Sales Invoice-taxes_section-hidden',
-                'Sales Invoice-project-hidden',
-                'Sales Invoice-section_break_40-label',
-				
-                'Sales Invoice Item-rate-columns',
-                'Sales Invoice Item-discount_percentage-columns',
-                'Sales Invoice Item-qty-columns',
-                'Sales Invoice Item-item_code-columns',
-                'Sales Invoice Item-warehouse-in_list_view',
-                'Sales Invoice Item-warehouse-hidden',
-                'Sales Invoice Item-rate-label',
-                'Sales Invoice Item-serial_no-in_list_view',
-                'Sales Invoice Item-batch_no-in_list_view',
-                'Sales Invoice Item-amount-label',
-                'Sales Invoice Item-qty-label',
-                'Sales Invoice Item-discount_percentage-label',
-                'Sales Invoice Item-discount_percentage-in_list_view'
+				# Quotation
+				'Quotation Item-consoleerp_item_total_qty' # qty available in all of the warehouses
             ]]
         ]
     }
