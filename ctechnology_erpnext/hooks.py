@@ -29,7 +29,10 @@ app_license = "MIT"
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-doctype_js = {"Quotation" : "customizations/Quotation/Quotation.js"}
+doctype_js = {
+	"Quotation" : "customizations/quotation/quotation.js",
+	"Sales Invoice" : "customizations/sales_invoice/sales_invoice.js"
+}
 
 # Home Pages
 # ----------
@@ -124,8 +127,11 @@ fixtures = [{
         "dt": "Custom Field",
         "filters": [
             ["name", "in", [
-				'Mode of Payment-consoleerp_territory',
-				
+			
+				# Customer
+				'Customer-consoleerp_is_pos', # Sales Invoice add_fetch to Is POS
+			
+				'Mode of Payment-consoleerp_territory',				
 				'Warehouse-consoleerp_territory',
 				
 				# Sales Invoice Fields
@@ -136,8 +142,9 @@ fixtures = [{
                 'Sales Invoice-consoleerp_warehouse', # warehouse
 				
 				# Quotation
+				'Quotation-consoleerp_notes', # a small-text datafield in the header of quotation
 				'Quotation Item-consoleerp_item_total_qty', # qty available in all of the warehouses
-				'Quotation Item-consoleerp_item_availability'
+				'Quotation Item-consoleerp_item_availability' # an editable textfield for availability
             ]]
         ]
     }
