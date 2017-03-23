@@ -136,7 +136,8 @@ fixtures = [{
                 'Sales Invoice-consoleerp_warehouse', # warehouse
 				
 				# Quotation
-				'Quotation Item-consoleerp_item_total_qty' # qty available in all of the warehouses
+				'Quotation Item-consoleerp_item_total_qty', # qty available in all of the warehouses
+				'Quotation Item-consoleerp_item_availability'
             ]]
         ]
     }
