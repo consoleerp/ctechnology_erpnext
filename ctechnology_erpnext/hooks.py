@@ -156,6 +156,7 @@ fixtures = [{
 				
 				# Sales Invoice Fields                
                 'Sales Invoice-consoleerp_hasqty', # Has Qty check field
+				'Sales Invoice-consoleerp_profit', # profit field
 				'Sales Invoice Item-consoleerp_cost', # Cost
                 'Sales Invoice Item-consoleerp_actual_qty', # actual qty
 				

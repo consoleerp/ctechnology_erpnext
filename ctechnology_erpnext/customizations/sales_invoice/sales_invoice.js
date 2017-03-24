@@ -38,6 +38,12 @@ frappe.ui.form.on('Sales Invoice', {
 		}
 	},
 	
+	validate : function(frm) {
+		
+		// calculate profit again on save
+		calculate_total_profit(frm);
+	},
+	
 	// mode of payment per territory
 	{% include 'ctechnology_erpnext/customizations/sales_invoice/mode_of_payment_per_territory/mode_of_payment_per_territory.js' %}
 	
@@ -46,22 +52,33 @@ frappe.ui.form.on('Sales Invoice', {
 
 // Child
 frappe.ui.form.on('Sales Invoice Item', {
+	// when a new row is added
 	items_add : function(frm, cdt, cdn) {
 		// set header warehouse-> detail
 		frappe.model.set_value(cdt, cdn, "warehouse", frm.doc.consoleerp_warehouse);
+		
+		// profit // from item_detail.js
+		calculate_total_profit(frm);
 	},
+	
+	// when item is removed // calc profit
+	items_remove : calculate_total_profit,
+	rate : calculate_total_profit,
+	qty : calculate_total_profit,
 	
 	// cost + header warehouse
 	item_code : function(frm, cdt, cdn) {
-		// fetch details about the item for the detail
+		// fetch details about the item for the detail // also does profit calc
 		item_detail(frm, cdt,cdn);		
 		
 		// set header warehouse-> detail
 		frappe.model.set_value(cdt, cdn, "warehouse", frm.doc.consoleerp_warehouse);
 	},
+	
 	warehouse : function(frm, cdt, cdn) {
-		// fetch details about the item for the detail
+		// fetch details about the item for the detail // also does profit calc
 		item_detail(frm, cdt,cdn);		
+		
 	}
 });
 

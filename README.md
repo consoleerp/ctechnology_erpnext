@@ -32,10 +32,12 @@ MIT
    The mode of payment table is cleared and set if the territory is changed
    Cash Riyadh, Cash Dammam.. etc.
    
+- **consoleerp_profit**  
+   Profit of the total invoice. Updated when items_add, items_remove, item_code, qty, rate is changed, after a delay of 1000ms
+   
 **Sales Invoice Item**  
 - **consoleerp_cost**, **consoleerp_actual_qty**    
    Fetched from `consoleerp_erpnext_client.api.item.item_warehouse_info`
-   
    
 ## Quotation
 
