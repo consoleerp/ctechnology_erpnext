@@ -2,6 +2,9 @@
 function update_qty_availability(frm, cdt, cdn) {
 	var child_doc = locals[cdt][cdn];
 	
+	if (child_doc.qty <= 0)
+		frappe.model.set_value(cdt, cdn, "consoleerp_item_availability", "Not Available");
+	
 	if (!child_doc.consoleerp_item_total_qty)
 		child_doc.consoleerp_item_total_qty = 0;
 	
