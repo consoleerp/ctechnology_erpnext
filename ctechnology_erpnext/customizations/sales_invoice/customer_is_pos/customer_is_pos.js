@@ -1,7 +1,8 @@
 customer : function(frm) {
-	setTimeout(function(){
+	frappe.after_ajax(function(){
 		frappe.db.get_value("Customer", {name : frm.doc.customer}, "consoleerp_is_pos", function(val) {
-			frm.set_value("is_pos", val);		
-		});
-	}, 500);
+			if (val != null)
+				frm.set_value("is_pos", val.consoleerp_is_pos);
+			});
+	});
 }
