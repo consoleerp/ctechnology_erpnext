@@ -151,8 +151,10 @@ fixtures = [{
 			
 				# Customer
 				'Customer-consoleerp_is_pos', # Sales Invoice add_fetch to Is POS
-			
+				# Mode of Payment
 				'Mode of Payment-consoleerp_territory',				
+				# Sales Person
+				'Sales Person-consoleerp_territory',
 				
 				# Sales Invoice Fields                
                 'Sales Invoice-consoleerp_hasqty', # Has Qty check field

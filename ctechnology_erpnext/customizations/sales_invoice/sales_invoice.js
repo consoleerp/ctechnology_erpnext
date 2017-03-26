@@ -26,6 +26,13 @@ frappe.ui.form.on('Sales Invoice', {
 			}
 		});
 				
+		// Sales Team set query
+		frm.set_query('sales_person', 'sales_team', function(doc, cdt, cdn) {
+			return {
+				filters : {'consoleerp_territory' : frm.doc.consoleerp_territory}
+			}
+		});
+				
 		// av qty onload from prev document
 		// if Sales Invoice is made from Sales Order, av. qty needs to be updated
 		if (frm.doc.__islocal && frm.doc.items.length > 0 && frm.doc.items[0].item_code) {			

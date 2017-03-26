@@ -18,6 +18,10 @@ MIT
    A check field to specify the customer is paid always or not.  
    used in Sales Invoice using
    `frm.add_fetch('customer', 'consoleerp_is_pos', 'is_pos');`
+   
+## Sales Person  
+- **Territory** Links Territory - `consoleerp_territory`  
+   To filter Sales Teams based on territory
 
 ## Sales Invoice
 - **add_fetches**  
@@ -34,6 +38,9 @@ MIT
    
 - **consoleerp_profit**  
    Profit of the total invoice. Updated when items_add, items_remove, item_code, qty, rate is changed, after a delay of 1000ms
+   
+- **Sales Team**  
+   Filters Sales Team based on `consoleerp_territory`.
    
 **Sales Invoice Item**  
 - **consoleerp_cost**, **consoleerp_actual_qty**    
