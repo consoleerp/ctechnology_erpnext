@@ -1,9 +1,6 @@
 frappe.ui.form.on('Sales Invoice', {
 	// add_fetches and query filters
 	refresh : function(frm) {
-		
-		// Automatically ticks is_pos based on custom field present in Customer
-		frm.add_fetch('customer', 'consoleerp_is_pos', 'is_pos');
 				
 		// has_qty set_query
 		// if its checked, only items with qty will be returned
@@ -45,14 +42,15 @@ frappe.ui.form.on('Sales Invoice', {
 		}
 	},
 	
-	validate : function(frm) {
-		
+	validate : function(frm) {		
 		// calculate profit again on save
 		calculate_total_profit(frm);
 	},
 	
 	// mode of payment per territory
-	{% include 'ctechnology_erpnext/customizations/sales_invoice/mode_of_payment_per_territory/mode_of_payment_per_territory.js' %}
+	{% include 'ctechnology_erpnext/customizations/sales_invoice/mode_of_payment_per_territory/mode_of_payment_per_territory.js' %},
+	// customer is pos
+	{% include 'ctechnology_erpnext/customizations/sales_invoice/customer_is_pos/customer_is_pos.js' %}
 	
 });
 
