@@ -42,9 +42,17 @@ frappe.ui.form.on('Sales Invoice', {
 		}
 	},
 	
+	before_save : function(frm)
+	{		
+		// header salesman
+		// takes header salesman and puts into table below
+		headerSalesman(frm);
+	},
+	
 	validate : function(frm) {		
 		// calculate profit again on save
 		calculate_total_profit(frm);
+	
 	},
 	
 	// mode of payment per territory
@@ -90,6 +98,8 @@ frappe.ui.form.on('Sales Invoice Item', {
 // supporting functions
 // item_detail
 {% include 'ctechnology_erpnext/customizations/sales_invoice/item_detail/item_detail.js' %}
+// header salesman
+{% include 'ctechnology_erpnext/customizations/sales_invoice/header_salesman/header_salesman.js' %}
 
 // Other App Includes
 // territory_setup
