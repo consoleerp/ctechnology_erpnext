@@ -22,7 +22,14 @@ frappe.ui.form.on('Sales Invoice', {
 				return { }
 			}
 		});
-				
+			
+		// header sales person
+		frm.set_query('consoleerp_sales_person', function(doc){
+			return {
+				filters : {'consoleerp_territory' : frm.doc.consoleerp_territory}
+			}
+		});
+		// detail
 		// Sales Team set query
 		frm.set_query('sales_person', 'sales_team', function(doc, cdt, cdn) {
 			return {
