@@ -17,6 +17,7 @@ app_license = "MIT"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/ctechnology_erpnext/css/ctechnology_erpnext.css"
 # app_include_js = "/assets/ctechnology_erpnext/js/ctechnology_erpnext.js"
+app_include_css="/assets/css/ctechnology_erpnext.min.css"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/ctechnology_erpnext/css/ctechnology_erpnext.css"
@@ -28,6 +29,9 @@ app_license = "MIT"
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {
+	"Sales Invoice": "customizations/sales_invoice/sales_invoice_list.js"
+}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 doctype_js = {
 	"Item" : "customizations/item/item.js",
