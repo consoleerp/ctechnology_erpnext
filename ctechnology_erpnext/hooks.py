@@ -17,7 +17,6 @@ app_license = "MIT"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/ctechnology_erpnext/css/ctechnology_erpnext.css"
 # app_include_js = "/assets/ctechnology_erpnext/js/ctechnology_erpnext.js"
-app_include_css="/assets/css/ctechnology_erpnext.min.css"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/ctechnology_erpnext/css/ctechnology_erpnext.css"
@@ -48,6 +47,7 @@ doctype_js = {
 	
 	#Stock
 	"Stock Entry" : "customizations/stock_entry/stock_entry.js",
+	"Warehouse Transfer": "customizations/warehouse_transfer/warehouse_transfer.js",
 	
 	# Buying
 	"Material Request" : "customizations/material_request/material_request.js",
