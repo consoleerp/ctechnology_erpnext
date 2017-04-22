@@ -24,6 +24,9 @@ MIT
    To filter Sales Teams based on territory
 
 ## Sales Invoice
+- **Bulk Submit**  
+   In Sales Invoice List- a new button is added into Menu. Select all the invoices and click on `Bulk Submit` to submit everything
+
 - **add_fetches**  
    - `is_pos`  
       This is fetched from the customer (`customer`)

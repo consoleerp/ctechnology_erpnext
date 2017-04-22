@@ -114,6 +114,11 @@ doctype_js = {
 # 		"on_trash": "method"
 #	}
 # }
+doc_events = {
+	"Sales Invoice": {
+		"validate": "ctechnology_erpnext.customizations.sales_invoice.validate"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
