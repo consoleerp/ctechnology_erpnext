@@ -67,3 +67,7 @@ MIT
    
 - **consoleerp_notes**  
    Just a `small_text` field in the header of Quotation, used to write small notes.
+
+## Purchase Invoice
+
+- The rate is always zero if there is no previous document   
