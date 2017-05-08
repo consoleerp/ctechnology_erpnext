@@ -47,6 +47,7 @@ doctype_js = {
 	
 	#Stock
 	"Stock Entry" : "customizations/stock_entry/stock_entry.js",
+	"Stock Reconciliation": "customizations/stock_reconciliation/stock_reconciliation.js",
 	"Warehouse Transfer": "customizations/warehouse_transfer/warehouse_transfer.js",
 	
 	# Buying
@@ -157,6 +158,9 @@ fixtures = [{
         "dt": "Custom Field",
         "filters": [
             ["name", "in", [
+			
+				#Stock Reconciliation
+				'Stock Reconciliation-consoleerp_warehouse',
 			
 				# Customer
 				'Customer-consoleerp_is_pos', # Sales Invoice add_fetch to Is POS
