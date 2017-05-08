@@ -39,7 +39,7 @@ function calculate_total_profit(frm){
 		
 		$.each(frm.doc.items, function(i, obj) {
 			try {
-				var child_profit = (obj.rate - obj.consoleerp_cost) * obj.qty;
+				var child_profit = (obj.rate - (obj.consoleerp_cost * obj.conversion_factor)) * obj.qty;
 				
 				if (child_profit != null)
 					profit += child_profit;

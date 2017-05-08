@@ -71,3 +71,8 @@ MIT
 ## Purchase Invoice
 
 - The rate is always zero if there is no previous document   
+
+## Stock Reconciliation
+
+- Renamed to Count Transaction (as in Shamil)
+- Moved warehouse to header `consoleerp_warehouse`.
