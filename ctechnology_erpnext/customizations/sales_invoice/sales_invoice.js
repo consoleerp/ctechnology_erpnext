@@ -113,5 +113,7 @@ frappe.ui.form.on('Sales Invoice Item', {
 {% include 'consoleerp_erpnext_client/customizations/territory_branch/custom_scripts/sales_invoice.js' %}
 // advanced_search
 {% include 'consoleerp_erpnext_client/customizations/advanced_item_search/item_search.js' %}
+// item stock detail
+{% include 'consoleerp_erpnext_client/customizations/item_stock_detail/item_stock_detail.js' %}
 // item stock validation
 {% include 'consoleerp_erpnext_client/customizations/item_stock_validation/item_stock_validation.js' %}
