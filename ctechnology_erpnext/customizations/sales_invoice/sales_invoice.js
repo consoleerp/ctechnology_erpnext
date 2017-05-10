@@ -57,6 +57,9 @@ frappe.ui.form.on('Sales Invoice', {
 	},
 	
 	validate : function(frm) {		
+		// remarks
+		frm.doc.remarks = frm.doc.consoleerp_description;
+	
 		// calculate profit again on save
 		calculate_total_profit(frm);
 	

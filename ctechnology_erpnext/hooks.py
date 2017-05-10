@@ -118,6 +118,12 @@ doctype_js = {
 doc_events = {
 	"Sales Invoice": {
 		"validate": "ctechnology_erpnext.customizations.sales_invoice.validate"
+	},
+	"Customer": {
+		"before_naming": "ctechnology_erpnext.customizations.customer.before_naming"
+	},
+	"Supplier": {
+		"before_naming": "ctechnology_erpnext.customizations.supplier.before_naming"
 	}
 }
 
@@ -158,6 +164,8 @@ fixtures = [{
         "dt": "Custom Field",
         "filters": [
             ["name", "in", [
+				#Supplier
+				'Supplier-territory',
 			
 				#Stock Reconciliation
 				'Stock Reconciliation-consoleerp_warehouse',
@@ -170,6 +178,7 @@ fixtures = [{
 				'Sales Person-consoleerp_territory',
 				
 				# Sales Invoice Fields                
+				'Sales Invoice-consoleerp_description',
                 'Sales Invoice-consoleerp_hasqty', # Has Qty check field
 				'Sales Invoice-consoleerp_sales_person',
 				'Sales Invoice-consoleerp_profit', # profit field
