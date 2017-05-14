@@ -34,18 +34,18 @@ var item_detail = async function(frm, cdt, cdn) {
 // calculates total profit and puts in footer field
 function calculate_total_profit(frm){
 	
-	setTimeout(function(){	
-		var profit = 0;
-		
+	setTimeout(function(){			
+		var cost = 0;
 		$.each(frm.doc.items, function(i, obj) {
 			try {
-				var child_profit = (obj.rate - (obj.consoleerp_cost * obj.conversion_factor)) * obj.qty;
+				var child_cost = obj.consoleerp_cost * obj.conversion_factor * obj.qty;
 				
-				if (child_profit != null)
-					profit += child_profit;
+				if (child_cost != null)
+					cost += child_cost;
 			} catch(err) {}
 		});
 		
+		var profit = frm.doc.grand_total - cost;
 		// set_value
 		frm.set_value("consoleerp_profit", profit);
 	}, 1000);

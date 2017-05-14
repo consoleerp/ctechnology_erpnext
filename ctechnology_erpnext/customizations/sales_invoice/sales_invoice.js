@@ -54,15 +54,22 @@ frappe.ui.form.on('Sales Invoice', {
 		// header salesman
 		// takes header salesman and puts into table below
 		headerSalesman(frm);
+		
+		// remarks
+		frm.doc.remarks = frm.doc.consoleerp_description;
 	},
 	
 	validate : function(frm) {		
-		// remarks
-		frm.doc.remarks = frm.doc.consoleerp_description;
 	
 		// calculate profit again on save
-		calculate_total_profit(frm);
+		calculate_total_profit(frm);	
+	},
 	
+	additional_discount_percentage: function(frm) {
+		calculate_total_profit(frm);	
+	},
+	discount_amount: function(frm) {
+		calculate_total_profit(frm);	
 	},
 	
 	// mode of payment per territory
