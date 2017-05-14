@@ -19,6 +19,13 @@ MIT
    used in Sales Invoice using
    `frm.add_fetch('customer', 'consoleerp_is_pos', 'is_pos');`
    
+- **customer_code**
+   A custom field for customer code
+   
+## Supplier
+- **territory**
+- **supplier_code**   
+   
 ## Sales Person  
 - **Territory** Links Territory - `consoleerp_territory`  
    To filter Sales Teams based on territory

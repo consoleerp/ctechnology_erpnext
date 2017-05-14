@@ -120,10 +120,10 @@ doc_events = {
 		"validate": "ctechnology_erpnext.customizations.sales_invoice.validate"
 	},
 	"Customer": {
-		"before_naming": "ctechnology_erpnext.customizations.customer.before_naming"
+		"validate": "ctechnology_erpnext.customizations.customer.validate"
 	},
 	"Supplier": {
-		"before_naming": "ctechnology_erpnext.customizations.supplier.before_naming"
+		"validate": "ctechnology_erpnext.customizations.supplier.validate"
 	}
 }
 
@@ -166,12 +166,15 @@ fixtures = [{
             ["name", "in", [
 				#Supplier
 				'Supplier-territory',
+				'Supplier-supplier_code',
 			
 				#Stock Reconciliation
 				'Stock Reconciliation-consoleerp_warehouse',
 			
 				# Customer
 				'Customer-consoleerp_is_pos', # Sales Invoice add_fetch to Is POS
+				'Customer-customer_code',
+				
 				# Mode of Payment
 				'Mode of Payment-consoleerp_territory',				
 				# Sales Person

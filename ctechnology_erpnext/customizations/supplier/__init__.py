@@ -1,6 +1,11 @@
 import frappe
 
-def before_naming(self, method):	
+def validate(self, method):	
+	# customer code set by user
+	# if customer is setting the code, naming series may not follow, and may not be unique
+	if self.supplier_code:
+		return
+
 	if not self.territory:
 		frappe.throw(_("Please select territory"))
 		
@@ -8,5 +13,9 @@ def before_naming(self, method):
 	if not abbr:
 		frappe.throw("Define abbreviation for territory")
 	
-	self.naming_series = "SUPP-" + abbr + "-"		
+	# frappe naming module
+	from frappe.model.naming import getseries
+	# takes key, number of digits as args	
+	naming_series = "SUPP-" + abbr + "-"
+	self.supplier_code = naming_series + getseries(naming_series, 5)
 	
