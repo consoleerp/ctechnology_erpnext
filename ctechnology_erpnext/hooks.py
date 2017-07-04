@@ -103,6 +103,39 @@ doctype_js = {
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
+has_permission = {
+	"Delivery Note": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Material Request": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Payment Entry": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Payment Request": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Purchase Invoice": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Purchase Order": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Purchase Receipt": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Quotation": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Request for Quotation": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Sales Invoice": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Sales Order": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Stock Entry": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Supplier Quotation": "consoleerp_erpnext_client.customizations.territory_branch.has_permission",
+	"Warehouse Transfer": "consoleerp_erpnext_client.customizations.territory_branch.has_permission"
+}
+
+permission_query_conditions = {
+	"Delivery Note": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Material Request": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Payment Entry": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Payment Request": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Purchase Invoice": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Purchase Order": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Purchase Receipt": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Quotation": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Request for Quotation": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Sales Invoice": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Sales Order": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Stock Entry": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Supplier Quotation": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions",
+	"Warehouse Transfer": "consoleerp_erpnext_client.customizations.territory_branch.permission_query_conditions"
+}
 
 # Document Events
 # ---------------
